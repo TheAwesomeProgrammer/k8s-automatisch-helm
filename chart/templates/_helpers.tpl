@@ -120,7 +120,7 @@ Create the name of the service account to use
       key: {{ include "ah.camelcase" $k }}
 {{- end }}
 - name: REDIS_HOST
-  value: "{{ $fullname }}-redis"
+  value: "{{ .Values.redis.host }}"
 - name: POSTGRES_HOST
   valueFrom:
     secretKeyRef:
